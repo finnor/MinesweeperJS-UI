@@ -1,0 +1,127 @@
+.board {
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 3px;
+}
+// minesweeper button
+.cell-btn {
+  font-weight: bold;
+  width: $cell-diameter;
+  height: $cell-diameter;
+  border: 1px solid $blue;
+  background: linear-gradient(to bottom right, $white, $blue);
+  padding: 0;
+  cursor: pointer;
+
+  // change background on hover if not a flag, revealed, or marked clickable or mineable
+  &:hover:not(.flag):not(.disabled):not(.clickable):not(.mineable) {
+    background: linear-gradient(to bottom right, $white, $dark-blue);
+  }
+  // change background on click if not flagged or revealed
+  &.active:not(.flag):not(.disabled) {
+    background: $bg-clicking !important;
+  }
+}
+.rl-click {
+  background: $bg-clicking;
+}
+// style for flagged spaces
+.flag {
+  background: url(../icons/sirea/flag.ico) center no-repeat,
+    linear-gradient(to bottom right, $white, $blue);
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  // change linear gradient on hover
+  &:hover {
+    background: url(../icons/sirea/flag.ico) center no-repeat,
+      linear-gradient(to bottom right, $white, $dark-blue);
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+  // correctly revealed mine
+  &.disabled {
+    background: url(../icons/sirea/flag.ico) center no-repeat,$bg-revealed;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+  // wrongly flagged space after reveal
+  &.disabled:not(.mine) {
+    background-image: none;
+    background-color: $bg-revealed;
+    position: relative;
+    &:after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: "\274c";
+      font-size: 1.25rem;
+      text-align: center;
+    }
+  }
+}
+.mine {
+  min-width: 1rem;
+  background: $bg-revealed url(../icons/sirea/mine2.ico) center no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  // exploded mine
+  &.losing-move {
+    background: $bg-revealed url(../icons/sirea/mine3.ico) center no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+}
+.timer {
+  min-width: 1rem;
+  background: $bg-revealed url(../icons/google/timer.ico) center no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+// revealed button
+.disabled:not(.losing-move):not(.mine):not(.flag) {
+  background: $bg-revealed;
+}
+.one {
+  color: $blue;
+}
+.two {
+  color: $green;
+}
+.three {
+  color: $red
+}
+.four {
+  color: $dark-blue;
+}
+.five {
+  color: $brown;
+}
+.six {
+  color: $cyan;
+}
+.seven {
+  color: $black;
+}
+.eight {
+  color: $gray;
+}

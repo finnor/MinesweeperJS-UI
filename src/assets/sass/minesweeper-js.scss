@@ -1,0 +1,13 @@
+@import "variables";
+
+.minesweeper-js {
+  min-width: $game-size;
+  text-align: center;
+  display: inline-block;
+
+
+  @import "board";
+  @import "header";
+  @import "helpers";
+  @import "solver";
+}

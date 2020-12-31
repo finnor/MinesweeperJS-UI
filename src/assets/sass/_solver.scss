@@ -1,0 +1,72 @@
+.solver {
+  font-size: 0.75rem;
+}
+.solver-btn {
+  padding: 0.5rem;
+  background: linear-gradient(to bottom left, $white, $blue);
+  color: $white;
+  font-size: 1.0rem;
+  font-weight: bold;
+  border-color: $blue;
+  border-radius: 0.25rem;
+  &:active {
+    background: linear-gradient(to bottom left, $white, $dark-blue);
+  }
+  &:focus, &:hover {
+    border-color: $dark-blue;
+  }
+}
+
+// solver mark on the board to indicate a button is clickable
+.clickable {
+  // normal
+  &:not(.disabled):not(.flag) {
+    background: $bg-clickable;
+  }
+  // normal hover
+  &:hover:not(.disabled):not(.flag) {
+    background: $bg-clickable-hover;
+  }
+  // if incorrectly flagged, then show flag and bg-color
+  &.flag {
+    background: url(../icons/sirea/flag.ico) center no-repeat, $bg-clickable;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+  &:hover.flag {
+    background: url(../icons/sirea/flag.ico) center no-repeat, $bg-clickable-hover;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+}
+// solver mark on the board to indicate a button is clickable
+.mineable {
+  &:not(.disabled):not(.flag) {
+    background: $bg-mineable;
+  }
+  &:hover:not(.disabled):not(.flag) {
+    background: $bg-mineable-hover;
+  }
+}
+// where the solver is locking at
+.solver-focus {
+  box-shadow: inset 0 0 5px $black;
+}
+// used in solver to indicate space outside consideration
+.dead {
+  width: $cell-diameter;
+  height: $cell-diameter;
+  border: 1px solid $blue;
+  background: gray;
+  padding: 0;
+}
+.tip {
+  div {
+    max-width: $cell-diameter*6;
+    padding: 0.5rem;
+  }
+}
