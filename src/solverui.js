@@ -99,6 +99,7 @@ export default class SolverUI {
       const tipEmptyPattern = document.createElement("div");
       tipEmptyPattern.id = "ms-js-tip-pattern";
       const title = document.createElement("h5");
+      title.classList.add("solver-title");
       title.innerHTML = "Rule #"+(move.ruleKey+3)+":";
       tipEmptyPattern.appendChild(title);
       const description = document.createElement("p");
@@ -144,6 +145,7 @@ export default class SolverUI {
     const templateUI = document.createElement("div");
     templateUI.id = "ms-js-tip-board-state";
     const title = document.createElement("h5");
+    title.classList.add("solver-title");
     title.innerHTML = "Board State:";
     templateUI.appendChild(title);
     for(let y=0; y<template.length; y++) {
@@ -182,6 +184,7 @@ export default class SolverUI {
     const templateUI = document.createElement("div");
     templateUI.id = "ms-js-tip-pattern";
     const title = document.createElement("h5");
+    title.classList.add("solver-title");
     title.innerHTML = "Pattern Match:";
     templateUI.appendChild(title);
     for(let y=0; y<patternTemplate.length; y++) {
@@ -242,6 +245,7 @@ export default class SolverUI {
     const templateUI = document.createElement("div");
     templateUI.id = "ms-js-tip-move";
     const title = document.createElement("h5");
+    title.classList.add("solver-title");
     title.innerHTML = "Moves:";
     templateUI.appendChild(title);
     for(let y=0; y<gameTemplate.length; y++) {
