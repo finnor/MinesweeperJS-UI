@@ -4,7 +4,7 @@ export default class HeaderUI
 {
   constructor(newGame, initialDifficulty) {
     this.newGame = newGame;
-    this.selectedDifficulty = gameDifficulties.find(current => current.name.toLowerCase()===(initialDifficulty ?? "").toLowerCase()) ?? 0;
+    this.selectedDifficulty = gameDifficulties.findIndex(current => current.name.toLowerCase()===(initialDifficulty ?? "").toLowerCase()) ?? 0;
     this.difficulties = gameDifficulties;
   }
 
