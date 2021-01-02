@@ -4,7 +4,16 @@ export default class HeaderUI
 {
   constructor(newGame, initialDifficulty) {
     this.newGame = newGame;
-    this.selectedDifficulty = gameDifficulties.findIndex(current => current.name.toLowerCase()===(initialDifficulty ?? "").toLowerCase()) ?? 0;
+    if(initialDifficulty) {
+      let findIndex = gameDifficulties.findIndex(current => current.name.toLowerCase()===initialDifficulty.toLowerCase());
+      if(findIndex===-1) {
+        this.selectedDifficulty = 0;
+      } else {
+        this.selectedDifficulty = findIndex;
+      }
+    } else {
+      this.selectedDifficulty = 0;
+    }
     this.difficulties = gameDifficulties;
   }
 
