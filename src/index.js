@@ -125,8 +125,10 @@ export default class AllUI {
    * Clears alerts from the solver
    */
   clearAlert() {
-    const warning = document.getElementById("ms-js-no-move-warning");
-    warning.innerHTML = "";
+    if(this.solver) {
+      const warning = document.getElementById("ms-js-no-move-warning");
+      warning.innerHTML = "";
+    }
   }
 
   /**
