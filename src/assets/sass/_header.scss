@@ -1,27 +1,14 @@
-.new-game {
-  width: $cell-diameter;
-  height: $cell-diameter;
-  background: url(../icons/sirea/smiley1.ico) center no-repeat;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
+.header {
+  .new-game {
+    width: $cell-diameter;
+    height: $cell-diameter;
+    background: url(../icons/sirea/smiley1.ico) center no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
 
-  // button clicked, oof face
-  &:active {
-    background: url(../icons/sirea/smiley2.ico) center no-repeat;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-  }
-  // on win, cool face
-  &.win {
-    background: url(../icons/sirea/smiley.ico) center no-repeat;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
+    // button clicked, oof face
     &:active {
       background: url(../icons/sirea/smiley2.ico) center no-repeat;
       -webkit-background-size: contain;
@@ -29,20 +16,53 @@
       -o-background-size: contain;
       background-size: contain;
     }
-  }
-  // on loss, sad face
-  &.loss {
-    background: url(../icons/sirea/smiley3.ico) center no-repeat;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-    &:active {
-      background: url(../icons/sirea/smiley2.ico) center no-repeat;
+    // on win, cool face
+    &.win {
+      background: url(../icons/sirea/smiley.ico) center no-repeat;
       -webkit-background-size: contain;
       -moz-background-size: contain;
       -o-background-size: contain;
       background-size: contain;
+      &:active {
+        background: url(../icons/sirea/smiley2.ico) center no-repeat;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+      }
     }
+    // on loss, sad face
+    &.loss {
+      background: url(../icons/sirea/smiley3.ico) center no-repeat;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+      &:active {
+        background: url(../icons/sirea/smiley2.ico) center no-repeat;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+      }
+    }
+  }
+
+  .mine {
+    min-width: 1rem;
+    background: url(../icons/sirea/mine2.ico) center no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+
+  .timer {
+    min-width: 1rem;
+    background: url(../icons/google/timer.ico) center no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
   }
 }

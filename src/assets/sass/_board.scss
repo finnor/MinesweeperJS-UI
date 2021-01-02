@@ -89,14 +89,6 @@
     background-size: contain;
   }
 }
-.timer {
-  min-width: 1rem;
-  background: $bg-revealed url(../icons/google/timer.ico) center no-repeat;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
-}
 // revealed button
 .disabled:not(.losing-move):not(.mine):not(.flag) {
   background: $bg-revealed;

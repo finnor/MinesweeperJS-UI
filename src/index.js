@@ -31,6 +31,7 @@ export default class AllUI {
     if(this.solver) {
       const solverContainer = document.createElement("div");
       solverContainer.id = "ms-js-solver-container";
+      solverContainer.classList.add("padding-top");
       solverContainer.appendChild(this.solverUI.create());
       minesweeper.appendChild(solverContainer);
     }
